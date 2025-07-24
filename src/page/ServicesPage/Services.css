@@ -1,0 +1,142 @@
+/* ServicesPage.css */
+
+/* Основные стили (как на других страницах) */
+.services-page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.services-background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.services-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Хедер (как на других страницах) */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+}
+
+.nav-links a {
+  margin-right: 24px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.contact-info p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Стили для основного контента */
+.services-main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  max-width: 900px;
+}
+
+.services-content-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.services-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+}
+
+.services-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.services-list li:before {
+  content: "•";
+  color: #ffffff;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .services-header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .nav-section {
+    width: 100%;
+    justify-content: center;
+    padding: 5px 0 !important;
+  }
+  
+  .logo-center {
+    order: -1;
+    margin: 10px 0;
+  }
+  
+  .services-main-content {
+    width: 90%;
+    top: 55%;
+  }
+  
+  .services-content-wrapper {
+    padding: 20px;
+  }
+  
+  .services-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .services-list li {
+    font-size: 16px;
+  }
+}
